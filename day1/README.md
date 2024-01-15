@@ -277,3 +277,68 @@ Date:   Mon Jan 15 11:10:06 2024 +0000
 ashu.py  helloashu.py
 [ashu@git-linux-server python-sc]$ 
 ```
+
+### rollback -- 
+
+<img src="roll.png">
+
+### rollback to previous commit id
+
+```
+[ashu@git-linux-server python-sc]$ git  log
+commit 7c6a8e22a1afd5776f5a9d0129e987749373e443 (HEAD -> master)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:27:37 2024 +0000
+
+    second change in script with time delay
+
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+
+=====>>>
+[ashu@git-linux-server python-sc]$ 
+[ashu@git-linux-server python-sc]$ git checkout  dc7ba43080d2a51af2a5841699677d0bc53e5282
+Note: switching to 'dc7ba43080d2a51af2a5841699677d0bc53e5282'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at dc7ba43 first python working script for task 1
+
+=======>>
+
+[ashu@git-linux-server python-sc]$ git log
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282 (HEAD)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+
+
+=====>>
+
+[ashu@git-linux-server python-sc]$ ls
+helloashu.py
+[ashu@git-linux-server python-sc]$ 
+[ashu@git-linux-server python-sc]$ cat  helloashu.py 
+print("Hello world")
+print("second day code change as per need")
+[ashu@git-linux-server python-sc]$ 
+```
+
+
