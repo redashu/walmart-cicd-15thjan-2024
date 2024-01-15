@@ -42,4 +42,40 @@ ashu
 
 ### same way using windows laptop also but using powershell
 
+### Installing git in linux server
+
+<img src="git.png">
+
+### installation link
+
+[click_here](https://www.git-scm.com/downloads)
+
+### Installing git on linux (redhat)
+
+```
+[ec2-user@ip-172-31-29-249 ~]$ sudo yum install git -y
+Failed to set locale, defaulting to C
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                            | 3.6 kB  00:00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.40.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: git-core = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl-Git = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Running transaction check
+
+```
+
+
+### verify 
+
+```
+[ashu@git-linux-server ~]$ git version 
+git version 2.40.1
+[ashu@git-linux-server ~]$ 
+
+```
 
