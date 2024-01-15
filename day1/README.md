@@ -342,3 +342,48 @@ print("second day code change as per need")
 ```
 
 
+### lets go back to newest commit id 
+
+```
+[ashu@git-linux-server python-sc]$ git log
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282 (HEAD)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+
+===>>
+
+[ashu@git-linux-server python-sc]$ 
+[ashu@git-linux-server python-sc]$ git reflog
+dc7ba43 (HEAD) HEAD@{0}: checkout: moving from master to dc7ba43080d2a51af2a5841699677d0bc53e5282
+7c6a8e2 (master) HEAD@{1}: commit: second change in script with time delay
+dc7ba43 (HEAD) HEAD@{2}: commit (initial): first python working script for task 1
+[ashu@git-linux-server python-sc]$
+
+====>>>
+
+[ashu@git-linux-server python-sc]$ git  checkout  7c6a8e2
+Previous HEAD position was dc7ba43 first python working script for task 1
+HEAD is now at 7c6a8e2 second change in script with time delay
+
+===>>
+
+[ashu@git-linux-server python-sc]$ ls
+ashu.py  helloashu.py
+
+====>>
+
+[ashu@git-linux-server python-sc]$ git log
+commit 7c6a8e22a1afd5776f5a9d0129e987749373e443 (HEAD, master)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:27:37 2024 +0000
+
+    second change in script with time delay
+
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+```
