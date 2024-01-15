@@ -44,7 +44,7 @@ ashu
 
 ### Installing git in linux server
 
-<img src="git.png">
+<img src="install.png">
 
 ### installation link
 
@@ -78,4 +78,82 @@ git version 2.40.1
 [ashu@git-linux-server ~]$ 
 
 ```
+
+### Creating directory structure to put some code and git to control it
+
+```
+ashu@git-linux-server ~]$ whoami
+ashu
+[ashu@git-linux-server ~]$ mkdir  ashu-projects
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ mkdir  ashu-projects/{webapp,python-sc,java-app}
+[ashu@git-linux-server ~]$ ls
+ashu-projects
+[ashu@git-linux-server ~]$ ls  ashu-projects/
+java-app  python-sc  webapp
+[ashu@git-linux-server ~]$ 
+
+```
+
+## Asking Git to start monitoring / controlling directory 
+
+--- GIT init --- 
+```
+[ashu@git-linux-server ashu-projects]$ ls
+java-app  python-sc  webapp
+[ashu@git-linux-server ashu-projects]$ git version 
+git version 2.40.1
+[ashu@git-linux-server ashu-projects]$ cd  python-sc/
+[ashu@git-linux-server python-sc]$ ls
+helloashu.py
+[ashu@git-linux-server python-sc]$ git  init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/ashu/ashu-projects/python-sc/.git/
+[ashu@git-linux-server python-sc]$ ls -a
+.  ..  .git  helloashu.py
+[ashu@git-linux-server python-sc]$ 
+```
+
+### folder to repo 
+
+<img src="init.png">
+
+### Overall git --management is a 3 step process
+
+<img src="3.png">
+
+### using add and commit 
+
+```
+[ashu@git-linux-server python-sc]$ ls
+helloashu.py
+[ashu@git-linux-server python-sc]$ ls  -a
+.  ..  .git  helloashu.py
+[ashu@git-linux-server python-sc]$ git add  helloashu.py  
+[ashu@git-linux-server python-sc]$ git commit  -m  "first python working script for task 1 "
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ashu@git-linux-server.(none)')
+[ashu@git-linux-server python-sc]$ 
+```
+
 
