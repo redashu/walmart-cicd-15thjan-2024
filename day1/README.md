@@ -182,4 +182,98 @@ ashu@git-linux-server python-sc]$  git config --global user.email ashutoshh@linu
 [ashu@git-linux-server python-sc]$ 
 ```
 
+### Some additional commands of git 
 
+### checking current status of repo 
+```
+
+[ashu@git-linux-server python-sc]$ git status
+On branch master
+nothing to commit, working tree clean
+[ashu@git-linux-server python-sc]$ 
+```
+
+### checking commit history -- timeline 
+
+```
+[ashu@git-linux-server python-sc]$ git log
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282 (HEAD -> master)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+[ashu@git-linux-server python-sc]$ 
+```
+
+### making changes in code after commit and checking by git 
+
+```
+[ashu@git-linux-server python-sc]$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloashu.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+====>>
+
+[ashu@git-linux-server python-sc]$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloashu.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ashu.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### lets add and commit 
+
+```
+[ashu@git-linux-server python-sc]$ ls
+ashu.py  helloashu.py
+[ashu@git-linux-server python-sc]$ git add  .
+[ashu@git-linux-server python-sc]$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ashu.py
+        modified:   helloashu.py
+
+[ashu@git-linux-server python-sc]$ git commit  -m  "second change i n script with time delay"
+[master 7c6a8e2] second change in script with time delay
+ 2 files changed, 3 insertions(+)
+ create mode 100644 ashu.py
+[ashu@git-linux-server python-sc]$ git status
+On branch master
+nothing to commit, working tree clean
+[ashu@git-linux-server python-sc]$ 
+
+
+```
+
+### checking commit id 
+
+```
+[ashu@git-linux-server python-sc]$ git log
+commit 7c6a8e22a1afd5776f5a9d0129e987749373e443 (HEAD -> master)
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:27:37 2024 +0000
+
+    second change in script with time delay
+
+commit dc7ba43080d2a51af2a5841699677d0bc53e5282
+Author: redashu <ashutoshh@linux.com>
+Date:   Mon Jan 15 11:10:06 2024 +0000
+
+    first python working script for task 1
+[ashu@git-linux-server python-sc]$ ls
+ashu.py  helloashu.py
+[ashu@git-linux-server python-sc]$ 
+```
