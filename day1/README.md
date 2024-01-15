@@ -420,4 +420,24 @@ java-app  python-sc  tasks  webapp
    78  ls
 ```
 
+### pushing exiting repo to new-repo of github 
+
+```
+[ashu@git-linux-server python-sc]$ ls
+ashu.py  helloashu.py
+[ashu@git-linux-server python-sc]$ git remote add origin https://github.com/redashu/ashu-wal-test.git
+
+
+[ashu@git-linux-server python-sc]$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 673 bytes | 673.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/redashu/ashu-wal-test.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+[ashu@git-linux-server python-sc]$ 
+```
 
