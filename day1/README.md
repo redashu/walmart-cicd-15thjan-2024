@@ -156,4 +156,30 @@ fatal: unable to auto-detect email address (got 'ashu@git-linux-server.(none)')
 [ashu@git-linux-server python-sc]$ 
 ```
 
+### above details is about github -- web based repo hosting platform service 
+
+<img src="github.png">
+
+### git vs github 
+
+<img src="git11.png">
+
+### Now to solve git commit first time problem we need to pass github account details once
+
+```
+ashu@git-linux-server python-sc]$  git config --global user.email ashutoshh@linux.com
+[ashu@git-linux-server python-sc]$ git config --global user.name  redashu
+[ashu@git-linux-server python-sc]$ 
+```
+
+### Now i can commit 
+
+```
+ git commit  -m  "first python working script for task 1 "
+[master (root-commit) dc7ba43] first python working script for task 1
+ 1 file changed, 2 insertions(+)
+ create mode 100644 helloashu.py
+[ashu@git-linux-server python-sc]$ 
+```
+
 
