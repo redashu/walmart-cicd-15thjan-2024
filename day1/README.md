@@ -445,3 +445,49 @@ branch 'master' set up to track 'origin/master'.
 <img src="newgit.png">
 
 
+
+## New git approach 
+
+
+### create repo on github account it self using webuii
+
+```
+[ashu@git-linux-server ashu-projects]$ whoami
+ashu
+[ashu@git-linux-server ashu-projects]$ ssh-keygen 
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ashu/.ssh/id_rsa):
+
+
+[ashu@git-linux-server ashu-projects]$ git clone git@github.com:redashu/ashu-walmart-case1.git
+Cloning into 'ashu-walmart-case1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
+[ashu@git-linux-server ashu-projects]$ ls
+ashu-walmart-case1  java-app  python-sc  tasks  webapp
+[ashu@git-linux-server ashu-projects]$ cd ashu-walmart-case1/
+[ashu@git-linux-server ashu-walmart-case1]$ ls
+hello.py  README.md
+
+
+[ashu@git-linux-server ashu-walmart-case1]$ git add .
+[ashu@git-linux-server ashu-walmart-case1]$ git commit  -m "change1"
+[master 2a229d7] change1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py
+
+
+[ashu@git-linux-server ashu-walmart-case1]$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:redashu/ashu-walmart-case1.git
+   5089062..2a229d7  master -> master
+```
