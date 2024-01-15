@@ -440,4 +440,8 @@ To https://github.com/redashu/ashu-wal-test.git
 branch 'master' set up to track 'origin/master'.
 [ashu@git-linux-server python-sc]$ 
 ```
+### git old vs new
+
+<img src="newgit.png">
+
 
