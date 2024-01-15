@@ -401,3 +401,23 @@ java-app  python-sc  tasks  webapp
 [ashu@git-linux-server tasks]$ 
 
 ```
+
+### taking a pubic / private git repo to your local / sever git location 
+
+<img src="clone.png">
+
+
+### task completed 
+
+```
+ git clone https://github.com/redashu/ashu-customer1-app.git
+   72  ls
+   73  cd ashu-customer1-app/
+   74  ls -a
+   75  git log
+   76  ls
+   77  git checkout  194aa87d875b3a7284db52b7270851addcf78e11
+   78  ls
+```
+
+
