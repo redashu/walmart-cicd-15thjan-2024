@@ -387,3 +387,17 @@ Date:   Mon Jan 15 11:10:06 2024 +0000
 
     first python working script for task 1
 ```
+
+### task folder creation 
+
+```
+[ashu@git-linux-server python-sc]$ ls
+ashu.py  helloashu.py
+[ashu@git-linux-server python-sc]$ cd  ..
+[ashu@git-linux-server ashu-projects]$ ls
+java-app  python-sc  tasks  webapp
+[ashu@git-linux-server ashu-projects]$ cd  tasks/
+[ashu@git-linux-server tasks]$ ls
+[ashu@git-linux-server tasks]$ 
+
+```
