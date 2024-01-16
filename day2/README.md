@@ -364,5 +364,22 @@ classes                    generated-test-sources  maven-status    test-classes
 [ashu@git-linux-server ashudemo]$ 
 ```
 
+### Running jar file 
 
+```
+[ashu@git-linux-server ashudemo]$ ls
+pom.xml  src  target
+[ashu@git-linux-server ashudemo]$ ls target/
+ashudemo-1.0-SNAPSHOT.jar  generated-sources       maven-archiver  surefire-reports
+classes                    generated-test-sources  maven-status    test-classes
+[ashu@git-linux-server ashudemo]$ java -cp target/ashudemo-1.0-SNAPSHOT.jar  com.example.ashudemo
+Error: Could not find or load main class com.example.ashudemo
+Caused by: java.lang.ClassNotFoundException: com.example.ashudemo
+
+
+[ashu@git-linux-server ashudemo]$ java -cp target/ashudemo-1.0-SNAPSHOT.jar  com.example.App
+Hello World!
+[ashu@git-linux-server ashudemo]$ 
+
+```
 
