@@ -148,4 +148,88 @@ To github.com:redashu/ashu-mavenops.git
    358a472..5fcf6dd  master -> master
 ```
 
+### java based build automation tool intro
 
+<img src="mvn.png">
+
+### Installing maven in rhel / amazon linux machine 
+
+```
+ yum install  java-11*
+Failed to set locale, defaulting to C
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                            | 3.6 kB  00:00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package java-11-amazon-corretto.x86_64 1:11.0.21+9-1.amzn2 will be installed
+--> Processing Dependency: libX11 for package: 1:java-11-amazon-corretto-11.0.21+9-1.amzn2.x86_64
+--> Processing Dependency: libXi for package: 1:java-11-amaz
+```
+
+### Verify jdk 11
+
+```
+[ashu@git-linux-server ashu-mavenops]$ java --version 
+openjdk 11.0.21 2023-10-17 LTS
+OpenJDK Runtime Environment Corretto-11.0.21.9.1 (build 11.0.21+9-LTS)
+OpenJDK 64-Bit Server VM Corretto-11.0.21.9.1 (build 11.0.21+9-LTS, mixed mode)
+[ashu@git-linux-server ashu-mavenops]$ 
+
+
+```
+
+### Installing maven on the same server under each user 
+
+```
+[ashu@git-linux-server ashu-mavenops]$ cd  ~
+[ashu@git-linux-server ~]$ ls
+ashu-projects
+[ashu@git-linux-server ~]$ wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+--2024-01-16 10:14:02--  https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+Resolving dlcdn.apache.org (dlcdn.apache.org)... 151.101.2.132, 2a04:4e42::644
+Connecting to dlcdn.apache.org (dlcdn.apache.org)|151.101.2.132|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9410508 (9.0M) [application/x-gzip]
+Saving to: ‘apache-maven-3.9.6-bin.tar.gz’
+
+100%[=======================================================================================>] 9,410,508   --.-K/s   in 0.06s   
+
+2024-01-16 10:14:02 (148 MB/s) - ‘apache-maven-3.9.6-bin.tar.gz’ saved [9410508/9410508]
+
+[ashu@git-linux-server ~]$ ls
+apache-maven-3.9.6-bin.tar.gz  ashu-projects
+[ashu@git-linux-server ~]$ 
+
+```
+
+### decompress maven 
+
+```
+[ashu@git-linux-server ~]$ ls
+apache-maven-3.9.6-bin.tar.gz  ashu-projects
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ tar xvzf  apache-maven-3.9.6-bin.tar.gz 
+apache-maven-3.9.6/README.txt
+apache-maven-3.9.6/LICENSE
+apache-maven-3.9.6/NOTICE
+```
+
+### checking directory 
+
+```
+[ashu@git-linux-server ~]$ ls
+apache-maven-3.9.6  apache-maven-3.9.6-bin.tar.gz  ashu-projects
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ ls apache-maven-3.9.6/
+bin  boot  conf  lib  LICENSE  NOTICE  README.txt
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ ls apache-maven-3.9.6/bin
+m2.conf  mvn  mvn.cmd  mvnDebug  mvnDebug.cmd  mvnyjp
+[ashu@git-linux-server ~]$ ls apache-maven-3.9.6/conf
+logging  settings.xml  toolchains.xml
+[ashu@git-linux-server ~]$ ls apache-maven-3.9.6/boot/
+plexus-classworlds-2.7.0.jar  plexus-classworlds.license
+[ashu@git-linux-server ~]$ 
+
+```
