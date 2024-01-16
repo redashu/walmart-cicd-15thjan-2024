@@ -233,3 +233,39 @@ plexus-classworlds-2.7.0.jar  plexus-classworlds.license
 [ashu@git-linux-server ~]$ 
 
 ```
+
+### Explore installation as ENV variable 
+
+```
+[ashu@git-linux-server ~]$ export  MAVEN_CONFIG=/home/ashu/apache-maven-3.9.6
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ export PATH=$PATH:$MAVEN_CONFIG/bin
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ export PATH
+[ashu@git-linux-server ~]$
+
+
+[ashu@git-linux-server ~]$ mvn --version 
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: /home/ashu/apache-maven-3.9.6
+Java version: 11.0.21, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-11-amazon-corretto.x86_64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.10.205-195.804.amzn2.x86_64", arch: "amd64", family: "unix"
+[ashu@git-linux-server ~]$ 
+
+
+```
+
+### setting env variable parmanently
+
+```
+=====>> opening file
+
+ nano  /home/ashu/.bashrc
+
+# User specific aliases and functions
+MAVEN_CONFIG=/home/ashu/apache-maven-3.9.6
+PATH=$PATH:$MAVEN_CONFIG/bin
+export PATH
+```
+
