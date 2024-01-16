@@ -383,3 +383,34 @@ Hello World!
 
 ```
 
+### After first time mavn store all the plugins and dependency in local repo -- later on it will consider as cache
+
+<img src="cache1.png">
+
+### m2 is under all the user home directory location 
+
+```
+[ashu@git-linux-server ashudemo]$ whoami
+ashu
+[ashu@git-linux-server ashudemo]$ ls  -a  /home/ashu/
+.   apache-maven-3.9.6             ashu-projects  .bash_logout   .bashrc  .gitconfig  .redhat  .vscode-server
+..  apache-maven-3.9.6-bin.tar.gz  .bash_history  .bash_profile  .cache   .m2         .ssh
+[ashu@git-linux-server ashudemo]$ 
+[ashu@git-linux-server ashudemo]$ 
+[ashu@git-linux-server ashudemo]$ cd  /home/ashu/.m2/
+[ashu@git-linux-server .m2]$ ls
+repository  wrapper
+[ashu@git-linux-server .m2]$ cd repository/
+[ashu@git-linux-server repository]$ ls
+antlr  backport-util-concurrent  com            commons-collections  commons-lang  junit  org
+asm    classworlds               commons-codec  commons-io           jdom          net
+[ashu@git-linux-server repository]$ ls junit/
+junit
+[ashu@git-linux-server repository]$ ls junit/junit/
+3.8.1  4.11  4.12
+[ashu@git-linux-server repository]$ ls junit/junit/4.11/
+junit-4.11.jar  junit-4.11.jar.sha1  junit-4.11.pom  junit-4.11.pom.sha1  _remote.repositories
+[ashu@git-linux-server repository]$ 
+
+```
+
