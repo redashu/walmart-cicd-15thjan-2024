@@ -269,3 +269,100 @@ PATH=$PATH:$MAVEN_CONFIG/bin
 export PATH
 ```
 
+### Using vscode or any other editor we can create sample maven project underline java language
+
+<img src="mvn11.png">
+
+### more info about java project
+
+<img src="mvn12.png">
+
+### checking project directory structure 
+
+```
+ashu@git-linux-server java-app]$ ls
+ashudemo
+[ashu@git-linux-server java-app]$ cd ashudemo/
+[ashu@git-linux-server ashudemo]$ ls
+pom.xml  src
+[ashu@git-linux-server ashudemo]$ ls src/
+main  test
+[ashu@git-linux-server ashudemo]$ ls src/main/
+java
+[ashu@git-linux-server ashudemo]$ ls src/main/java/
+com
+[ashu@git-linux-server ashudemo]$ ls src/main/java/com/
+example
+[ashu@git-linux-server ashudemo]$ ls src/main/java/com/example/
+App.java
+[ashu@git-linux-server ashudemo]$ ls src/test/java/com/example/
+AppTest.java
+```
+
+### apache maven life cycle 
+
+<img src="mvnset.png">
+
+### mvn install does all the given steps 
+
+<img src="mvni.png">
+
+### doing it
+
+```
+[ashu@git-linux-server ashudemo]$ mvn install 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.example:ashudemo >------------------------
+[INFO] Building ashudemo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ ashudemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ashu/ashu-projects/java-app/ashudemo/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ ashudemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ ashudemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ashu/ashu-projects/java-app/ashudemo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ ashudemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.1:test (default-test) @ ashudemo ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ ashudemo ---
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ ashudemo ---
+[INFO] Installing /home/ashu/ashu-projects/java-app/ashudemo/target/ashudemo-1.0-SNAPSHOT.jar to /home/ashu/.m2/repository/com/example/ashudemo/1.0-SNAPSHOT/ashudemo-1.0-SNAPSHOT.jar
+[INFO] Installing /home/ashu/ashu-projects/java-app/ashudemo/pom.xml to /home/ashu/.m2/repository/com/example/ashudemo/1.0-SNAPSHOT/ashudemo-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.678 s
+[INFO] Finished at: 2024-01-16T11:51:57Z
+[INFO] ------------------------------------------------------------------------
+[ashu@git-linux-server ashudemo]$ ls
+pom.xml  src  target
+[ashu@git-linux-server ashudemo]$ ls target/
+ashudemo-1.0-SNAPSHOT.jar  generated-sources       maven-archiver  surefire-reports
+classes                    generated-test-sources  maven-status    test-classes
+[ashu@git-linux-server ashudemo]$ 
+```
+
+
+
