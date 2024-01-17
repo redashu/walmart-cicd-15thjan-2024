@@ -215,4 +215,20 @@ catalina.policy  context.xml          jaspic-providers.xsd  server.xml          
 <img src="tomj.png">
 
 
+### deploy war to tomcat 
 
+```
+ashu@git-linux-server java-app]$ cd ashu-webapp/
+[ashu@git-linux-server ashu-webapp]$ ls
+pom.xml  src  target
+[ashu@git-linux-server ashu-webapp]$ ls target/
+ashu-webapp  ashu-webapp.war  maven-archiver
+[ashu@git-linux-server ashu-webapp]$ cp -v target/ashu-webapp.war   /home/ashu/apache-tomcat-10.1.18/webapps/
+‘target/ashu-webapp.war’ -> ‘/home/ashu/apache-tomcat-10.1.18/webapps/ashu-webapp.war’
+```
+
+### to access 
+
+```
+http://34.202.73.46:8081/ashu-webapp/
+```
