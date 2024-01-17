@@ -186,5 +186,33 @@ MAVEN_CONFIG=/home/ashu/apache-maven-3.9.6
 PATH=$PATH:$MAVEN_CONFIG/bin:$TOMCAT_HOME/bin
 export PATH
 ```
+### changing tomcat port to 8081 
+
+<img src="tomp.png">
+
+### below  is the path for server.xml 
+
+```
+[ashu@git-linux-server ~]$ ls
+apache-maven-3.9.6  apache-tomcat-10.1.18  ashu-projects
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$ cd apache-tomcat-10.1.18/
+[ashu@git-linux-server apache-tomcat-10.1.18]$ ls
+bin           conf             lib      logs    README.md      RUNNING.txt  webapps
+BUILDING.txt  CONTRIBUTING.md  LICENSE  NOTICE  RELEASE-NOTES  temp         work
+[ashu@git-linux-server apache-tomcat-10.1.18]$ cd conf/
+[ashu@git-linux-server conf]$ ls
+Catalina         catalina.properties  jaspic-providers.xml  logging.properties  tomcat-users.xml  web.xml
+catalina.policy  context.xml          jaspic-providers.xsd  server.xml          tomcat-users.xsd
+[ashu@git-linux-server conf]$ nano  server.xml 
+[ashu@git-linux-server conf]$ 
+[ashu@git-linux-server conf]$ 
+
+```
+
+### java webapp to tomcat journey 
+
+<img src="tomj.png">
+
 
 
