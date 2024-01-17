@@ -232,3 +232,8 @@ ashu-webapp  ashu-webapp.war  maven-archiver
 ```
 http://34.202.73.46:8081/ashu-webapp/
 ```
+
+### Introduction to cicd process in brief 
+
+<img src="cicd.png">
+
