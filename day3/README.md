@@ -114,3 +114,77 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/p
 
 <img src="tomcat.png">
 
+### Installing tomcat 
+
+### Download 
+
+```
+ wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.18/bin/apache-tomcat-10.1.18.tar.gz
+```
+
+### extract 
+
+```
+tar xvzf apache-tomcat-10.1.18.tar.gz 
+```
+
+### Understanding tomcat directory structure 
+
+<img src="tomd.png">
+
+### setting ENV 
+
+```
+[ashu@git-linux-server apache-tomcat-10.1.18]$ export TOMCAT_HOME=/home/ashu/apache-tomcat-10.1.18
+[ashu@git-linux-server apache-tomcat-10.1.18]$ export PATH=$PATH:$TOMCAT_HOME/bin
+[ashu@git-linux-server apache-tomcat-10.1.18]$ export PATH
+[ashu@git-linux-server apache-tomcat-10.1.18]$ c
+bash: c: command not found
+[ashu@git-linux-server apache-tomcat-10.1.18]$ cd
+[ashu@git-linux-server ~]$ 
+[ashu@git-linux-server ~]$
+
+====>> Starting 
+[ashu@git-linux-server ~]$ startup.sh 
+Using CATALINA_BASE:   /home/ashu/apache-tomcat-10.1.18
+Using CATALINA_HOME:   /home/ashu/apache-tomcat-10.1.18
+Using CATALINA_TMPDIR: /home/ashu/apache-tomcat-10.1.18/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /home/ashu/apache-tomcat-10.1.18/bin/bootstrap.jar:/home/ashu/apache-tomcat-10.1.18/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+Tomcat started.
+
+====>> stop
+
+[ashu@git-linux-server ~]$ shutdown.sh 
+Using CATALINA_BASE:   /home/ashu/apache-tomcat-10.1.18
+Using CATALINA_HOME:   /home/ashu/apache-tomcat-10.1.18
+Using CATALINA_TMPDIR: /home/ashu/apache-tomcat-10.1.18/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /home/ashu/apache-tomcat-10.1.18/bin/bootstrap.jar:/home/ashu/apache-tomcat-10.1.18/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+```
+
+
+### making env persistent
+
+```
+[ashu@git-linux-server ~]$ cat  /home/ashu/.bashrc 
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+TOMCAT_HOME=/home/ashu/apache-tomcat-10.1.18
+MAVEN_CONFIG=/home/ashu/apache-maven-3.9.6
+PATH=$PATH:$MAVEN_CONFIG/bin:$TOMCAT_HOME/bin
+export PATH
+```
+
+
