@@ -286,3 +286,12 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/jenkins.service
 
 [click_here](https://www.jenkins.io/doc/book/installing/)
 
+
+### options under jenkins job
+
+<img src="jj.png">
+
+### user concept in jenkins 
+
+<img src="user.png">
+
