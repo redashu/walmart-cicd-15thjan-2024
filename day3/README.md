@@ -237,3 +237,52 @@ http://34.202.73.46:8081/ashu-webapp/
 
 <img src="cicd.png">
 
+### Installation of jenkins as options 
+
+<img src="install.png">
+
+## Installing on RHEL 
+
+### Installing java 11
+
+```
+yum install java-11* 
+```
+
+### create repo 
+
+```
+sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+```
+
+### installing gpgkey 
+
+```
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+```
+
+### Installing jenkins 
+
+```
+yum install jenkins 
+```
+
+### starting jenkins 
+
+```
+systemctl start jenkins
+[root@ip-172-31-32-154 ~]# systemctl enable jenkins
+Created symlink from /etc/systemd/system/multi-user.target.wants/jenkins.service to /usr/lib/systemd/system/jenkins.service.
+[root@ip-172-31-32-154 ~]# systemctl status jenkins
+● jenkins.service - Jenkins Continuous Integration Server
+   Loaded: loaded (/usr/lib/systemd/system/jenkins.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2024-01-17 10:24:50 UTC; 11s ago
+ Main PID: 3985 (java)
+   CGroup: /system.slice/jenkins.service
+
+```
+
+### you can use below link for installation 
+
+[click_here](https://www.jenkins.io/doc/book/installing/)
+
