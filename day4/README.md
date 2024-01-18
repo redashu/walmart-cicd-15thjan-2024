@@ -43,3 +43,55 @@ git commit -m "updating war file to new git repo "
 git push https://redashu:pasword@github.com/redashu/ashu-walmart-releaseb1.git 
 
 ```
+## Introduction to scripting  method of jenkinsfile for creating pipeline jobs 
+
+<img src="pipe2.png">
+
+### understanding pipeline jobs 
+
+<img src="jfile.png">
+
+### Example 1 of jenkinsfile 
+
+```
+pipeline {
+    agent any
+
+    stages {
+        // this is first stage or you can say first job with given steps
+        stage('test what we get') {
+            steps {
+                echo 'Hello World'
+                sh 'whoami'
+                sh 'ls -a'
+            }
+        }
+    }
+}
+
+```
+
+### jenkinsfile updated
+
+```
+pipeline {
+    agent any
+
+    stages {
+        // this is first stage or you can say first job with given steps
+        stage('taking source code from git repo ') {
+            steps {
+                echo 'Hello World'
+                sh 'whoami'
+                // using git plugin to clone repo 
+                git 'https://github.com/redashu/ashu-mvnweb-project.git'
+                sh 'ls -a'
+                // build project
+                sh '/opt/maven39/bin/mvn  install'
+                sh 'ls target'
+            }
+        }
+    }
+}
+
+```
