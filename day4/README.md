@@ -210,3 +210,9 @@ pipeline {
 }
 
 ```
+
+### Deployment stage options 
+
+<img src="ops.png">
+
+
