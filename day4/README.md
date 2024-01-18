@@ -95,3 +95,28 @@ pipeline {
 }
 
 ```
+
+### update file
+
+```
+pipeline {
+    agent any
+
+    stages {
+        // this is first stage or you can say first job with given steps
+        stage('taking source code from git repo ') {
+            steps {
+                echo 'Hello World'
+                sh 'whoami'
+                // using git plugin to clone repo 
+                git branch: 'master', url: 'https://github.com/redashu/ashu-mvnweb-project.git'
+                sh 'ls -a'
+                // build project
+                sh '/opt/maven39/bin/mvn  install'
+                sh 'ls target'
+            }
+        }
+    }
+}
+
+```
