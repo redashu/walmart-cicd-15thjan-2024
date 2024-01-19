@@ -166,4 +166,29 @@ pipeline {
 
 ```
 
+### adding ansible deployment 
 
+```
+---
+- name: Run Date Command on Remote Linux
+  hosts: tomcat_server  # Replace with the target host or group of hosts
+  remote_user: root 
+
+  tasks:
+    - name: Run date command
+      command: date
+      register: date_output  # Store the output of the date command
+
+    - name: Display date output
+      debug:
+        var: date_output.stdout
+
+    - name: Clone GitHub repository (specify release)
+      git:
+        repo: https://github.com/redashu/ashu-walmart-releaseb1.git  # Replace with your GitHub repository URL
+        dest: /tmp/deployashu # keep your own name 
+        version: release  
+
+    - name: Run ls command to check copied files
+      command: cp -v /tmp/deployashu/ashu-webapp.war /opt/apache-tomcat-10.1.18/webapps/
+```
